@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <!-- navbar mobile -->
+<nav
+    class="fixed md:hidden w-full flex justify-between px-3 py-2 bg-[#034198] border-b border-zinc-600 z-20">
+    <a href="/" class="w-[160px] h-[50px] flex">
+    <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
+    </a>
+    <button id="menuO" class="w-[40px] h-[40px]" onclick="cek(true)">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="31"
+        height="31"
+        viewBox="0 0 50 50"
+        fill="white"
+    >
+        <path
+        d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+        ></path>
+    </svg>
+    </button>
+    <button id="menuC" class="hidden w-[40px] h-[40px]" onclick="cek(false)">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="31"
+        height="31"
+        viewBox="0 0 50 50"
+        fill="white"
+    >
+        <path
+        d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+        ></path>
+    </svg>
+    </button>
+</nav>
+
+<!-- sidebar -->
+<div
+id="sidebar"
+class="md:hidden fixed top-[60px] w-full h-screen flex flex-col gap-5 bg-black bg-opacity-70 text-white text-base font-semibold px-5 py-4 z-10"
+style="left: -500px; transition: 1s"
+>
+<a href="/" class="{{ request()->is('/') ? 'text-yellow-300' : 'text-white' }}">Beranda</a>
+<a href="tentang" class="{{ request()->is('tentang') ? 'text-yellow-300' : 'text-white' }}">Tentang Kami</a>
+<details>
+  <summary class="list-none text-white">Perlengkapan Sewa</summary>
+  <div class="mt-2 px-3 py-2 flex flex-col gap-1 bg-black bg-opacity-15">
+    <a href="./sewa/projector.html" class="text-white">LCD Proyektor</a>
+    <a href="./sewa/stand-screen.html" class="text-white">Stand Screen</a>
+    <a href="./sewa/paket.html" class="text-white">Paket Sewa</a>
+  </div>
+</details>
+<a href="kontak" class="{{ request()->is('kontak') ? 'text-yellow-300' : 'text-white' }} hover:text-yellow-300">Kontak</a>
+</div>
+
+<!-- navbar desktop -->
+<nav
+class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] border-b border-zinc-600 z-10"
+>
+<a href="/" class="w-[160px] h-[50px] flex scale-150 ml-10">
+  <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
+</a>
+<div
+  class="w-11/12 lg:w-3/4 xl:w-1/2 flex justify-center items-center gap-10 text-xl font-semibold"
+>
+  <a href="/" class="text-white">HOME</a>
+  <a href="/tentang" class="text-white"
+    >ABOUT</a
+  >
+  <a href="/" class="text-white">BUSINESS</a>
+</div>
+</nav>
+<main class="w-full flex flex-col">
+      <!-- slider -->
+      <div class="slider">
+        <div
+          id="gambar1"
+          class="bg-[url('excavator.jpeg')] bg-cover bg-center bg-x bg-no-repeat w-full h-screen lg:h-screen"
+        >
+          <div
+            class="w-full h-full bg-black/50 flex flex-col gap-5 justify-center items-center"
+          >
+            <span class="w-[80%] text-white text-4xl font-semibold text-center"
+              >" THERE IS NO SUCH THING AS 'AWAY'. WHEN WE THROW ANYTHING AWAY IT MUST GO SOMEWHERE. "</span
+            >
+            <span class="text-white text-2xl font-semibold text-center">Annie Leonard</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Us -->
+      <div
+        class="w-full bg-white flex flex-col lg:flex-row justify-between gap-10 lg:gap-5 px-8 lg:px-16 py-14 pb-20">
+        <div
+          class="w-full lg:w-1/2 flex flex-col gap-4 text-zinc-800 text-justify text-lg font-semibold"
+        >
+          <h2 class="text-2xl lg:text-4xl font-bold flex flex-col lg:inline">
+            ABOUT <span class="text-[#034198]">OUR COMPANY</span>
+          </h2>
+          <p>
+            PT.SURYA SAKTHI MAKMUR is an Indonesian
+            company which is being promoted by an Indian and
+            Malaysian technocrat.
+            We have been running in metal scrap industry for
+            last 28 years in Malaysia and India, and entered
+            into Indonesian Metal Scrap market in 2020.
+          </p>
+          <p>
+            As a licensed provider of FERROUS & NON-FERROUS
+            scrap metal for the global metal recycling industry,
+            we are contributing to the creation of a recycling
+            oriented society and resourcerecycling.
+            Specialized in domestic of trade ferrous metals
+            such as HMS, P&S, Premium Scrap and LMS, we are
+            also exporting all grades of non-ferrous such as
+            Copper, Aluminum, Brass, Stainless Steel and
+            more
+          </p>
+          <a
+            href="tentang"
+            class="w-[200px] h-[50px] bg-blue-800 hover:bg-white border-2 border-blue-800 text-white hover:text-blue-800 text-base font-semibold rounded-full flex justify-center items-center mx-auto lg:mx-0 mt-2 transition"
+            >More</a
+          >
+        </div>
+        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <img
+            src="./SSM_About.png"
+            alt="SSM Picture"
+            class="w-full lg:w-3/4 rounded"
+          />
+        </div>
+      </div>
+
+      <!-- Business -->
+      <h2 class="w-full text-zinc-800 text-2xl lg:text-4xl font-bold text-center">MEET <span class="text-[#034198]">OUR BUSINESS</span></h2>
+      <div class="w-[90%] mx-auto flex flex-col lg:flex-row justify-center gap-4 py-10">
+        <div class="w-full lg:w-1/5 h-[350px] bg-[url('./Business1.jpeg')] bg-cover bg-center bg-x bg-no-repeat border-2 border-[#034198] hover:border-white rounded-xl overflow-hidden transition">
+          <span class="w-full h-full bg-white hover:bg-black/70 flex justify-center items-center text-xl text-[#034198] hover:text-white text-center font-semibold transition px-7 py-5">Scrap Metal Counsulting</span>
+          <!-- <img src="" alt="" class="w-full h-full bg-zinc-900"> -->
+        </div>
+        <div class="w-full lg:w-1/5 h-[350px] bg-[url('./Business2.jpeg')] bg-cover bg-center bg-x bg-no-repeat border-2 border-[#034198] hover:border-white rounded-xl overflow-hidden transition">
+          <span class="w-full h-full bg-white hover:bg-black/70 flex justify-center items-center text-xl text-[#034198] hover:text-white text-center font-semibold transition px-7 py-5">Industrial Demolition Services</span>
+          <!-- <img src="" alt="" class="w-full h-full bg-zinc-900"> -->
+        </div>
+        <div class="w-full lg:w-1/5 h-[350px] bg-[url('./Business3.jpeg')] bg-cover bg-center bg-x bg-no-repeat border-2 border-[#034198] hover:border-white rounded-xl overflow-hidden transition">
+          <span class="w-full h-full bg-white hover:bg-black/70 flex justify-center items-center text-xl text-[#034198] hover:text-white text-center font-semibold transition px-7 py-5">Ship Demolition Services</span>
+          <!-- <img src="" alt="" class="w-full h-full bg-zinc-900"> -->
+        </div>
+        <div class="w-full lg:w-1/5 h-[350px] bg-[url('./Business4.jpeg')] bg-cover bg-center bg-x bg-no-repeat border-2 border-[#034198] hover:border-white rounded-xl overflow-hidden transition">
+          <span class="w-full h-full bg-white hover:bg-black/70 flex justify-center items-center text-xl text-[#034198] hover:text-white text-center font-semibold transition px-7 py-5">Underwater Pipeline Decommisioning</span>
+          <!-- <img src="" alt="" class="w-full h-full bg-zinc-900"> -->
+        </div>
+        <div class="w-full lg:w-1/5 h-[350px] bg-[url('./Business5.jpeg')] bg-cover bg-center bg-x bg-no-repeat border-2 border-[#034198] hover:border-white rounded-xl overflow-hidden transition">
+          <span class="w-full h-full bg-white hover:bg-black/70 flex justify-center items-center text-xl text-[#034198] hover:text-white text-center font-semibold transition px-7 py-5">Scrap Metal Trading</span>
+          <!-- <img src="" alt="" class="w-full h-full bg-zinc-900"> -->
+        </div>
+      </div>
+
+      <!-- Metal Production -->
+      <h2 class="w-full text-blue-900 text-2xl lg:text-4xl font-bold text-center pt-10">STEEL PRODUCTION <span class="text-zinc-800">AND</span> SCRAP CONSUMPTION</h2>
+      <div
+        class="w-full bg-white flex flex-col lg:flex-row justify-between gap-10 px-8 lg:px-16 py-14 pb-20">
+        <div class="w-full lg:w-1/2 flex justify-center lg:justify-start">
+          <img
+            src="./scrap consumting.jpeg"
+            alt="SSM Picture"
+            class="w-full h-[400px]"
+          />
+        </div>
+        <div class="w-full lg:w-1/2 flex flex-col gap-4 text-zinc-800 text-justify text-lg font-semibold">
+          <p>
+            In 2019, roughly 1.5 billion metric tons of steel were produced in only seven
+            regions, with Chinaproducing the majorityat 996 million tons of steel. Globally,
+            the consumption of steel scrap increased by 3.4 percent between 2018 and
+            2019.
+          </p>
+          <p>
+            Since the first industrial revolution, steel has been one of
+            the key materials used in industrial production. With
+            environmental awareness on the rise, companies are now
+            prioritizing the use of recycled metals in the production
+            process.
+          </p>
+          <p>
+            Used metals are crushed and shredded into scraps which
+            can be conveniently transported and used in the
+            production cycle. China is the leading user of steel scrap
+            worldwide. Among the leading exporters of steel scrap,
+            the U.S. exported over 24 million metric tons in 2011,
+            whichdecreasedto 18 million metrictonsin2019.
+          </p>
+        </div>
+      </div>
+
+      <!-- Partner -->
+      <!-- <div id="layanan" class="w-full mt-[100vh] bg-white flex flex-col gap-10 text-white pt-20 pb-24">
+        <span class="text-2xl text-[#034198] text-center font-semibold mb-10">OUR PARTNERS</span>
+        <div class="w-[80%] mx-auto flex justify-between">
+          <img src="./partner1.jpg" alt="" class="w-[120px] h-[60px]">
+          <img src="./partner2.jpeg" alt="" class="w-[120px] h-[60px]">
+          <img src="./partner3.png" alt="" class="w-[120px] h-[60px]">
+          <img src="./partner4.png" alt="" class="w-[350px] h-[60px]">
+          <img src="./partner5.jpeg" alt="" class="w-[120px] h-[60px]">
+        </div>
+        <div class="w-[80%] mx-auto flex justify-between">
+          <img src="./partner6.jpeg" alt="" class="w-[220px] h-[60px]">
+          <img src="./partner7.jpeg" alt="" class="w-[220px] h-[60px]">
+          <img src="./partner8.png" alt="" class="w-[150px] h-[60px]">
+          <img src="./partner9.jpg" alt="" class="w-[100px] h-[60px]">
+          <img src="./partner10.jpeg" alt="" class="w-[120px] h-[60px]">
+        </div>
+      </div> -->
+      <!-- Konsultasi via Whatsapp -->
+      <x-konsultasi></x-konsultasi>
+    </main>
+
+  <footer class="bg-[#034198] text-white">
+    <div class="w-full flex flex-col lg:flex-row gap-10 px-6 py-10 lg:pl-28">
+      <div class="lg:w-1/4 flex flex-col items-center gap-3 text-center">
+        <div class="flex flex-col items-center">
+          <img src="logo1.jpeg" alt="Logo" class="w-full" />
+        </div>
+      </div>
+      <div class="lg:w-3/4 flex flex-col gap-4">
+        <span class="font-semibold text-xl text-WHITE"
+          >SURYA SAKTHI MAKMUR</span
+        >
+        <div class="flex flex-col gap-3">
+          <a href="/" class="w-fit hover:text-yellow-400">HOME</a>
+          <a href="tentang" class="w-fit hover:text-yellow-400">ABOUT</a>
+          <a href="/#layanan" class="w-fit hover:text-yellow-400"
+            >BUSINESS</a
+          >
+          <a href="/" class="w-fit hover:text-yellow-400">PARTNER</a>
+        </div>
+      </div>
+      <div
+        class="lg:w-2/4 lg:pr-20 flex flex-col items-center gap-3 lg:text-end text-start"
+      >
+        <p class="w-full">18 Office Park, Lantai 22, Suite (E, F & G), Jalan TB Simatupang, NO. 18. RT.02/RW.01, Kebagusan Kec Pasar Minggu, Kota Jakarta Selatan, Daerah Ibu Kota Jakarta - 12520</p>
+        <div class="w-full flex flex-col">
+          <span>Website: www.suryasakthimakmurgroup.com</span>
+          <span>Email: inf0@suryasakthigroup.com</span>
+        </div>
+        <div class="w-full flex lg:justify-end justify-start gap-3">
+          <a
+            href="https://www.instagram.com/sewa_proyektorsmg"
+            class="fa fa-instagram w-10 h-10 rounded-full bg-[#e9ecee] text-xl text-gray-700 flex justify-center items-center hover:bg-yellow-500 hover:text-white"
+            target="_blank"
+          ></a>
+          <a
+            href="https://www.tiktok.com/@rz_proyektorsmg"
+            class="fab fa-tiktok w-10 h-10 rounded-full bg-[#e9ecee] text-xl text-gray-700 flex justify-center items-center hover:bg-yellow-500 hover:text-white"
+            target="_blank"
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full h-14 bg-blue-700 text-white font-medium flex justify-center items-center border-t border-zinc-600"
+    >
+      <span class="text-sm"
+        >© Copyright PT. Surya Sakthi Makmur. All Rights Reserved</span
+      >
+    </div>
+  </footer>
+
+    <script>
+        const menuO = document.querySelector("#menuO");
+        const menuC = document.querySelector("#menuC");
+        let menuChecked = false;
+
+        function cek(yesno) {
+        if (yesno == false) {
+            yesno = true;
+            menuO.classList.remove("hidden");
+            menuC.classList.add("hidden");
+            sidebar.style.left = "-500px";
+        } else {
+            yesno = false;
+            menuO.classList.add("hidden");
+            menuC.classList.remove("hidden");
+            sidebar.style.left = "0px";
+        }
+        }
+    </script>
+        
+</body>
+</html>
