@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/ba965b16bb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      #business:hover{
+        background: #000000ab;
+        color: #fff;
+        color: #dbdbdb;
+      }
+      #card-business:hover{
+        border: 1px solid #fff;
+      }
+      #sosmed-ico{
+        display: flex;
+      }
+      a.fa{
+        font-size: 23px;
+      }
+
+      a > span.fa-whatsapp{
+        display: flex;
+        font-size: 32px;
+      }
+
+      #logo-loading{
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: loading 2s linear infinite;
+      }
+      @keyframes loading{
+        0%{
+            /* rotate: 0deg; */
+            opacity: 0;
+        }
+        50%{
+            /* rotate: 360deg; */
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="w-full h-screen bg-[#034198] flex justify-center items-center fixed z-34" id="loading-screen">
+        <!-- <div class="w-[300px] h-[264px] overflow-hidden relative">
+            <img src="./picsvg_download (1).svg" alt="" class="absolute bg-white scale-x-114 scale-y-103" id="logo-loading">
+        </div> -->
+        <img src="./logo-SSM.webp" alt="" class="w-[200px] h-[170px] bg-white" id="logo-loading">
+    </div>
+
+    <!-- navbar mobile -->
+<nav
+    class="fixed md:hidden w-full flex justify-between px-3 py-2 bg-[#034198] border-b border-zinc-600 z-32">
+    <a href="/" class="w-[160px] h-[50px] flex">
+    <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
+    </a>
+    <button id="menuO" class="w-[40px] h-[40px]" onclick="cek(true)">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="31"
+        height="31"
+        viewBox="0 0 50 50"
+        fill="white"
+    >
+        <path
+        d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+        ></path>
+    </svg>
+    </button>
+    <button id="menuC" class="hidden w-[40px] h-[40px]" onclick="cek(false)">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="31"
+        height="31"
+        viewBox="0 0 50 50"
+        fill="white"
+    >
+        <path
+        d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+        ></path>
+    </svg>
+    </button>
+</nav>
+
+<!-- sidebar -->
+<div
+id="sidebar"
+class="md:hidden fixed top-[60px] w-full h-screen flex flex-col gap-5 bg-[#dfdfdf] text-[#034198] text-base font-semibold px-5 py-4 z-32"
+style="left: -500px; transition: 1s"
+>
+<a href="./index.html" class="">BERANDA</a>
+<a href="" class="">TENTANG KAMI</a>
+<a href="" class="">LAYANAN KAMI</a>
+<a href="./galeri.html" class="">GALERI</a>
+<!-- <details>
+  <summary class="list-none text-[#034198]">LAYANAN</summary>
+  <div class="mt-2 px-3 py-2 flex flex-col gap-1 bg-black/2 0 bg-opacity-15">
+    <a href="" class="text-[#034198]">SCRAP METAL CONSULTING</a>
+    <a href="" class="text-[#034198]">INDUSTRIAL DEMOLITION SERVICES</a>
+    <a href="" class="text-[#034198]">SHIP DEMOLITION SERVICES</a>
+    <a href="" class="text-[#034198]">UNDERWATER PIPELINE DECOMMISIONING</a>
+    <a href="" class="text-[#034198]">SCRAP METAL TRADING</a>
+  </div>
+</details> -->
+<a href="kontak" class="">KONTAK KAMI</a>
+</div>
+
+<!-- navbar desktop -->
+<nav
+class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] border-b border-zinc-600 z-32"
+>
+<a href="/" class="w-[160px] h-[50px] flex scale-150 ml-10">
+  <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
+</a>
+<div
+  class="w-11/12 lg:w-3/4 xl:w-1/2 flex justify-center items-center gap-10 text-xl font-semibold"
+>
+  <a href="./index.html" class="text-white">BERANDA</a>
+  <a href="/tentang" class="text-white"
+    >TENTANG KAMI</a
+  >
+  <a href="/" class="text-white">LAYANAN</a>
+  <a href="./galeri.html" class="text-white">GALERI</a>
+</div>
+</nav>
+<main class="w-full flex flex-col">
+      <!-- Galeri -->
+      <h2 class="w-full text-[#034198] text-2xl lg:text-4xl font-bold text-center pt-32">GALERI <span class="text-zinc-800">PEKERJAAN KAMI</span></h2>
+      <span class="w-[80%] text-zinc-800 text-lg lg:text-2xl font-bold text-center mx-auto pt-4 pb-20">Sebagian Kecil Dokumentasi Pekerjaan Kami</span>
+      <div class="w-[80%] lg:w-full flex justify-center flex-wrap gap-10 mx-auto pb-32" 
+       data-aos="fade-up"
+       data-aos-duration="1000"
+       data-aos-delay="200">
+        <img src="./SSM_Pic1.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./SSM_Pic2.png" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./Mesin-Hammer-Mil-Crusher.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./home2.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./Kaleng-Dan-Rongsok4.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./Mesin-Shredding.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+      </div>
+
+      <!-- Kontak -->
+      <div class="w-[80%] bg-gradient-to-tr from-blue-500 to-blue-700 mx-auto rounded-xl flex flex-col items-center gap-4 text-center text-white font-bold px-9 py-8 mb-24">
+        <span class="text-2xl lg:text-5xl">Ingin Membongkar Bangunan atau Menjual Material Bekas?</span>
+        <span class="text-base lg:text-lg font-semibold">Kami Siap Membantu dengan Harga Terjangkau. Hubungi kami untuk informasi lebih lanjut dan estimasi biaya.</span>
+        <span class="text-xl">HUBUNGI KAMI SEKARANG</span>
+        <a
+            href="tentang"
+            class="w-[200px] h-[50px] bg-green-700 hover:bg-white border-2 border-transparent hover:border-blue-800 text-white hover:text-blue-800 text-base font-semibold rounded-full flex justify-center items-center mx-auto lg:mx-0 mt-2 transition"
+        >
+          <span class="fa fa-whatsapp w-10 h-10 justify-center items-center"></span>
+          <span>0812 3456 7890</span>   
+        </a
+          >
+      </div>
+    </main>
+
+  <footer class="bg-[#034198] text-white">
+    <div class="w-full flex flex-col lg:flex-row gap-10 px-6 py-10 lg:pl-28">
+      <div class="lg:w-1/4 flex flex-col items-center gap-3 text-center">
+        <div class="flex flex-col items-center">
+          <img src="logo1.jpeg" alt="Logo" class="w-full" />
+        </div>
+      </div>
+      <div class="lg:w-3/4 flex flex-col gap-4">
+        <span class="font-semibold text-xl text-WHITE"
+          >SURYA SAKTHI MAKMUR</span
+        >
+        <div class="flex flex-col gap-3">
+          <a href="./index.html" class="w-fit hover:text-yellow-400">BERANDA</a>
+          <a href="tentang" class="w-fit hover:text-yellow-400">TENTANG KAMI</a>
+          <a href="/" class="w-fit hover:text-yellow-400">LAYANAN</a>
+          <a href="./galeri.html" class="w-fit hover:text-yellow-400">GALERI</a>
+        </div>
+      </div>
+      <div
+        class="lg:w-2/4 lg:pr-20 flex flex-col items-center gap-3 lg:text-end text-start"
+      >
+        <p class="w-full">18 Office Park, Lantai 22, Suite (E, F & G), Jalan TB Simatupang, NO. 18. RT.02/RW.01, Kebagusan Kec Pasar Minggu, Kota Jakarta Selatan, Daerah Ibu Kota Jakarta - 12520</p>
+        <div class="w-full flex flex-col">
+          <span>Website: www.suryasakthimakmurgroup.com</span>
+          <span>Email: inf0@suryasakthigroup.com</span>
+        </div>
+        <div class="w-full flex lg:justify-end justify-start gap-3">
+          <a
+            href="https://www.instagram.com/surya_sakthimakmur/"
+            class="fa fa-instagram w-10 h-10 rounded-full bg-[#034198] text-xl text-white flex justify-center items-center hover:bg-white hover:text-[#034198] border border-white"
+            target="_blank"
+            id="sosmed-ico"
+          ></a>
+          <a
+            href=""
+            class="fa fa-whatsapp w-10 h-10 rounded-full bg-[#034198] text-xl text-white flex justify-center items-center hover:bg-white hover:text-[#034198] border border-white"
+            target="_blank"
+            id="sosmed-ico"
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full h-14 bg-blue-700 text-white font-medium flex justify-center items-center border-t border-zinc-600"
+    >
+      <span class="text-sm"
+        >© Copyright PT. Surya Sakthi Makmur. All Rights Reserved</span
+      >
+    </div>
+  </footer>
+
+    <script>
+        const menuO = document.querySelector("#menuO");
+        const menuC = document.querySelector("#menuC");
+        let menuChecked = false;
+
+        function cek(yesno) {
+        if (yesno == false) {
+            yesno = true;
+            menuO.classList.remove("hidden");
+            menuC.classList.add("hidden");
+            sidebar.style.left = "-500px";
+        } else {
+            yesno = false;
+            menuO.classList.add("hidden");
+            menuC.classList.remove("hidden");
+            sidebar.style.left = "0px";
+        }
+        }
+
+        const load_screen = document.querySelector("#loading-screen");
+        window.addEventListener('load', () => {
+            console.log("selesai di load");
+            load_screen.style.display = "none";
+        });
+    </script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // You can also pass an optional settings object
+      // below listed default settings
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+      });
+    </script>
+</body>
+</html>

@@ -35,9 +35,29 @@
         display: flex;
         font-size: 32px;
       }
+
+      #logo-loading{
+        animation: loading 2s linear infinite;
+      }
+      @keyframes loading{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+      }
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="w-full h-screen bg-[#034198] flex justify-center items-center fixed z-34" id="loading-screen">
+        <img src="./logo-SSM.webp" alt="" class="w-[200px] h-[170px] bg-white" id="logo-loading">
+    </div>
+
     <!-- navbar mobile -->
 <nav
     class="fixed md:hidden w-full flex justify-between px-3 py-2 bg-[#034198] border-b border-zinc-600 z-32">
@@ -82,10 +102,10 @@ id="sidebar"
 class="md:hidden fixed top-[60px] w-full h-screen flex flex-col gap-5 bg-[#dfdfdf] text-[#034198] text-base font-semibold px-5 py-4 z-32"
 style="left: -500px; transition: 1s"
 >
-<a href="/" class="">BERANDA</a>
+<a href="./index.html" class="">BERANDA</a>
 <a href="" class="">TENTANG KAMI</a>
-<a href="" class="">MESIN YANG DIGUNAKAN</a>
 <a href="" class="">LAYANAN KAMI</a>
+<a href="./galeri.html" class="">GALERI</a>
 <!-- <details>
   <summary class="list-none text-[#034198]">LAYANAN</summary>
   <div class="mt-2 px-3 py-2 flex flex-col gap-1 bg-black/2 0 bg-opacity-15">
@@ -103,18 +123,18 @@ style="left: -500px; transition: 1s"
 <nav
 class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] border-b border-zinc-600 z-32"
 >
-<a href="/" class="w-[160px] h-[50px] flex scale-150 ml-10">
+<a href="./index.html" class="w-[160px] h-[50px] flex scale-150 ml-10">
   <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
 </a>
 <div
   class="w-11/12 lg:w-3/4 xl:w-1/2 flex justify-center items-center gap-10 text-xl font-semibold"
 >
-  <a href="/" class="text-white">BERANDA</a>
+  <a href="./index.html" class="text-white">BERANDA</a>
   <a href="/tentang" class="text-white"
     >TENTANG KAMI</a
   >
   <a href="/" class="text-white">LAYANAN</a>
-  <a href="/" class="text-white">GALERI</a>
+  <a href="./galeri.html" class="text-white">GALERI</a>
 </div>
 </nav>
 <main class="w-full flex flex-col">
@@ -470,10 +490,10 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
           >SURYA SAKTHI MAKMUR</span
         >
         <div class="flex flex-col gap-3">
-          <a href="/" class="w-fit hover:text-yellow-400">BERANDA</a>
+          <a href="./index.html" class="w-fit hover:text-yellow-400">BERANDA</a>
           <a href="tentang" class="w-fit hover:text-yellow-400">TENTANG KAMI</a>
           <a href="/" class="w-fit hover:text-yellow-400">LAYANAN</a>
-          <a href="/" class="w-fit hover:text-yellow-400">GALERI</a>
+          <a href="./galeri.html" class="w-fit hover:text-yellow-400">GALERI</a>
         </div>
       </div>
       <div
@@ -527,6 +547,12 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
             sidebar.style.left = "0px";
         }
         }
+
+        const load_screen = document.querySelector("#loading-screen");
+        window.addEventListener('load', () => {
+            console.log("selesai di load");
+            load_screen.style.display = "none";
+        });
     </script>
         
     <!-- Slider -->
