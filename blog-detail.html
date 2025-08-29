@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. Surya Sakthi Makmur</title>
+    <meta name="keywords" content="PT. Surya Sakthi Makmur, PT Surya Sakthi Makmur, pt surya sakthi makmur, Surya Sakthi Makmur, surya sakthi makmur, suryasakthimakmur, besi tua, kaleng, rongsok">
+     <meta name="author" content="suryasakthigroup.com"> 
+    <meta name="description" content="Menerima berbagai jenis besi, rongsok dan kaleng dari rumah, gedung, atau proyek dengan harga kompetitif dan layanan cepat.">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PT. Surya Sakthi Makmur" />
+    <meta property="og:description" content="Menerima berbagai jenis besi, rongsok dan kaleng dari rumah, gedung, atau proyek dengan harga kompetitif dan layanan cepat." />
+     <meta property="og:image" content="https://suryasakthigroup.com/logo-SSM.webp" /> 
+     <meta property="og:url" content="https://suryasakthigroup.com/" /> 
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/ba965b16bb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link
+    rel="stylesheet"
+    href="https://cdn.ckeditor.com/ckeditor5/43.2.0/ckeditor5.css"
+    />
+    <style>
+      *{
+        font-family: "Montserrat", Sans-serif;
+      }
+      #business:hover{
+        background: #000000ab;
+        color: #fff;
+        color: #dbdbdb;
+      }
+      #card-business:hover{
+        border: 1px solid #fff;
+      }
+      #sosmed-ico{
+        display: flex;
+      }
+      #footer a.fa{
+        font-size: 23px;
+      }
+
+      a > span.fa-whatsapp{
+        display: flex;
+        font-size: 32px;
+      }
+
+      #logo-loading{
+        animation: loading 2s linear infinite;
+      }
+      @keyframes loading{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+      }
+
+      /* CKEditor */
+      .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content {
+        border: none;
+      }
+      .ck.ck-editor__editable_inline {
+        border: none;
+        padding-inline: 0px;
+      }
+      .ck.ck-editor__editable_inline p{
+        text-align: justify;
+      }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="w-full h-screen bg-[#034198] flex justify-center items-center fixed z-34" id="loading-screen">
+        <img src="./logo-SSM.webp" alt="" class="w-[200px] h-[170px] bg-white" id="logo-loading">
+    </div>
+
+    <!-- navbar mobile -->
+<nav
+    class="fixed md:hidden w-full flex justify-between px-3 py-2 bg-[#034198] border-b border-zinc-600 z-32">
+    <a href="/" class="w-[160px] h-[50px] flex">
+    <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
+    </a>
+    <button id="menuO" class="w-[40px] h-[40px]" onclick="cek(true)">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="31"
+        height="31"
+        viewBox="0 0 50 50"
+        fill="white"
+    >
+        <path
+        d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+        ></path>
+    </svg>
+    </button>
+    <button id="menuC" class="hidden w-[40px] h-[40px]" onclick="cek(false)">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="31"
+        height="31"
+        viewBox="0 0 50 50"
+        fill="white"
+    >
+        <path
+        d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+        ></path>
+    </svg>
+    </button>
+</nav>
+
+<!-- sidebar -->
+<div
+id="sidebar"
+class="md:hidden fixed top-[60px] w-full h-screen flex flex-col gap-5 bg-[#dfdfdf] text-[#034198] text-sm font-semibold px-5 py-4 z-32"
+style="left: -500px; transition: 1s"
+>
+<a href="index.html" class="">BERANDA</a>
+<a href="tentang.html" class="">TENTANG KAMI</a>
+<a href="layanan.html" class="">LAYANAN KAMI</a>
+<a href="galeri.html" class="">GALERI</a>
+<a href="blog.html" class="">BLOG</a>
+<a href="https://wa.me/6281902032323?text=Halo PT. Surya Sakthi Makmur! Saya butuh bantuan terkait..." class="">KONTAK KAMI</a>
+</div>
+
+<!-- navbar desktop -->
+<nav
+class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] border-b border-zinc-600 z-32"
+>
+<a href="index.html" class="w-[160px] h-[50px] flex scale-150 ml-10">
+  <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
+</a>
+<div
+  class="w-11/12 lg:w-3/4 xl:w-1/2 flex justify-center items-center gap-10 text-base font-semibold"
+>
+  <a href="index.html" class="text-white">BERANDA</a>
+  <a href="tentang.html" class="text-white"
+    >TENTANG KAMI</a
+  >
+  <a href="layanan.html" class="text-white">LAYANAN</a>
+  <a href="galeri.html" class="text-white">GALERI</a>
+  <a href="blog.html" class="text-white">BLOG</a>
+</div>
+</nav>
+<main class="w-full flex flex-col">
+      <!-- hero -->
+      <div class="">
+        <div
+          id="gambar1"
+          class="bg-[url('Mesin-Hammer-Mil-Crusher.jpeg')] bg-cover lg:bg-position-[center_top_-25rem] bg-x bg-no-repeat w-full h-screen lg:h-screen flex items-end"
+        >
+          <div
+            class="w-full h-full lg:h-[200px] bg-black/70 flex flex-col gap-5 justify-center items-center"
+            data-aos="fade-up" data-aos-duration="1000"
+          >
+            <span class="w-[90%] text-white text-2xl font-semibold text-center lg:text-start">Berita & Artikel</span>
+            <span class="w-[90%] text-white text-lg lg:text-xl font-semibold text-center lg:text-start">
+              Tetap terhubung dengan perkembangan terbaru dalam perdagangan Logam Bekas.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog -->
+      <h2 class="w-[90%] lg:w-[80%] text-[#034198] text-2xl font-bold mx-auto pt-12 pb-20">Potensi Daur Ulang Besi dan Kapal Skrap untuk Lingkungan Bersih dan Berkelanjutan</h2>
+      <div class="w-[90%] lg:w-[80%] flex flex-col gap-4 mx-auto pb-28">
+        <img src="./SSM_Pic1.jpeg" alt="" class="w-full h-[223px] lg:h-[700px]">
+        <div class="w-full flex justify-center pb-5">
+          <textarea id="deskripsi">
+            &lt;p&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(33,37,41);&quot;&gt;Industri daur ulang besi skrap kapal bekas memainkan peran yang sangat penting dalam mewujudkan lingkungan yang bersih dan berkelanjutan. Sebagai sumber daya terbarukan, besi skrap kapal bekas memiliki potensi besar untuk mengurangi dampak lingkungan, mengurangi limbah, dan mendukung pertumbuhan ekonomi. Artikel ini akan menyajikan informasi terbaru dan relevan mengenai potensi besar daur ulang besi skrap kapal bekas.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Mengurangi Pencemaran Lingkungan&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;a. Pengurangan Limbah Tumpukan:&lt;/p&gt;&lt;p&gt;Dengan mendaur ulang besi skrap kapal bekas, jumlah limbah tumpukan di tempat pembuangan akhir dapat dikurangi secara signifikan. Limbah ini sering kali sulit terurai dan mencemari tanah serta sumber air di sekitarnya. Dengan daur ulang, kita mengurangi risiko pencemaran lingkungan.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;b. Mengurangi Emisi Gas Rumah Kaca:&lt;/p&gt;&lt;p&gt;Proses penambangan bijih besi baru memerlukan energi yang besar, menghasilkan emisi gas rumah kaca yang signifikan. Daur ulang besi skrap kapal bekas mengurangi kebutuhan akan bijih baru, membantu mengurangi jejak karbon dan menopang upaya mitigasi perubahan iklim.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Kontribusi terhadap Ekonomi Lokal dan Global&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;a. Penciptaan Lapangan Kerja:&lt;/p&gt;&lt;p&gt;Industri daur ulang besi skrap kapal bekas menciptakan ribuan lapangan kerja langsung dan tidak langsung, mendukung penghidupan masyarakat lokal. Dari pekerjaan di pabrik daur ulang hingga bisnis logistik dan distribusi, sektor ini menjadi tulang punggung bagi banyak komunitas.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;b. Penghematan Energi dan Sumber Daya Alam:&lt;/p&gt;&lt;p&gt;Dengan menggunakan besi skrap kapal bekas, industri baja menghemat energi sekitar 75% dan bijih besi sekitar 90% dibandingkan dengan menggunakan bahan baku bijih baru. Penghematan ini tidak hanya mengurangi biaya produksi, tetapi juga mendukung ketersediaan sumber daya alam bagi generasi mendatang.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;strong&gt;Tantangan dan Solusi&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;a. Tantangan dalam Pemilahan dan Pengolahan:&lt;/p&gt;&lt;p&gt;Salah satu tantangan utama dalam daur ulang besi skrap kapal bekas adalah pemilahan material yang efisien. Teknologi pemilahan otomatis dan metode daur ulang yang inovatif memainkan peran penting dalam mengatasi tantangan ini.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;b. Peran Pemerintah dan Kesadaran Masyarakat:&lt;/p&gt;&lt;p&gt;Pemerintah memiliki peran kunci dalam merumuskan kebijakan yang mendukung daur ulang dan dalam meningkatkan kesadaran masyarakat tentang pentingnya menggali potensi besar dari limbah besi skrap kapal bekas. Kampanye edukasi dan insentif pemerintah dapat mendorong partisipasi aktif masyarakat dalam daur ulang.&lt;/p&gt;
+          </textarea>
+        </div>
+        <a href="blog.html" class="fa fa-chevron-left w-fit text-sm text-[#034198]">
+            <span class="font-normal">Kembali</span>
+        </a>
+      </div>
+
+      <!-- Kontak -->
+      <div class="w-[80%] bg-gradient-to-tr from-blue-500 to-blue-700 mx-auto rounded-xl flex flex-col items-center gap-4 text-center text-white font-bold px-9 py-8 mb-24">
+        <span class="text-xl">Ingin Membongkar Bangunan atau Menjual Material Bekas?</span>
+        <span class="text-base font-semibold">Kami Siap Membantu dengan Harga Terjangkau. Hubungi kami untuk informasi lebih lanjut dan estimasi biaya.</span>
+        <span class="text-base">HUBUNGI KAMI SEKARANG</span>
+        <a
+            href="https://wa.me/6281902032323?text=Halo PT. Surya Sakthi Makmur! Saya butuh bantuan terkait..."
+            class="w-[200px] h-[50px] bg-green-500 hover:bg-white border-2 border-transparent hover:border-blue-800 text-white hover:text-blue-800 text-base font-semibold rounded-full flex justify-center items-center mx-auto lg:mx-0 mt-2 transition"
+        >
+          <span class="fa fa-whatsapp w-10 h-10 justify-center items-center"></span>
+          <span>0819 0203 2323</span>   
+        </a
+          >
+      </div>
+    </main>
+
+  <footer class="bg-[#034198] text-white" id="footer">
+    <div class="w-full flex flex-col lg:flex-row gap-10 px-6 py-10 lg:pl-28">
+      <div class="lg:w-1/4 flex flex-col items-center gap-3 text-center">
+        <div class="flex flex-col items-center">
+          <img src="logo1.jpeg" alt="Logo" class="w-full" />
+        </div>
+      </div>
+      <div class="lg:w-3/4 flex flex-col gap-4">
+        <span class="font-semibold text-xl text-WHITE"
+          >SURYA SAKTHI MAKMUR</span
+        >
+        <div class="flex flex-col gap-3">
+          <a href="index.html" class="w-fit hover:text-yellow-400">BERANDA</a>
+          <a href="tentang.html" class="w-fit hover:text-yellow-400">TENTANG KAMI</a>
+          <a href="layanan.html" class="w-fit hover:text-yellow-400">LAYANAN</a>
+          <a href="galeri.html" class="w-fit hover:text-yellow-400">GALERI</a>
+        </div>
+      </div>
+      <div
+        class="lg:w-3/4 lg:pr-20 flex flex-col items-center gap-3 lg:text-end text-start"
+      >
+        <p class="w-full">18 Office Park, Lantai 22, Suite (E, F & G), Jalan TB Simatupang, NO. 18. RT.02/RW.01, Kebagusan Kec Pasar Minggu, Kota Jakarta Selatan, Daerah Ibu Kota Jakarta - 12520</p>
+        <div class="w-full flex flex-col">
+          <span>Website: www.suryasakthimakmurgroup.com</span>
+          <span>Email: inf0@suryasakthigroup.com</span>
+        </div>
+        <div class="w-full flex lg:justify-end justify-start gap-3">
+          <a
+            href="https://www.instagram.com/surya_sakthimakmur/"
+            class="fa fa-instagram w-10 h-10 rounded-full bg-[#034198] text-xl text-white flex justify-center items-center hover:bg-white hover:text-[#034198] border border-white"
+            target="_blank"
+            id="sosmed-ico"
+          ></a>
+          <a
+            href=""
+            class="fa fa-whatsapp w-10 h-10 rounded-full bg-[#034198] text-xl text-white flex justify-center items-center hover:bg-white hover:text-[#034198] border border-white"
+            target="_blank"
+            id="sosmed-ico"
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full h-14 bg-blue-700 text-white text-center font-medium flex justify-center items-center border-t border-zinc-600"
+    >
+      <span class="text-sm"
+        >© Copyright PT. Surya Sakthi Makmur. All Rights Reserved</span
+      >
+    </div>
+  </footer>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.2.0/ckeditor5.js",
+          "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.2.0/"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import {
+        ClassicEditor,
+        Essentials,
+        Bold,
+        Italic,
+        Font,
+        Paragraph,
+        Link
+      } from "ckeditor5";
+
+      ClassicEditor.create(document.querySelector("#deskripsi"), {
+        plugins: [Essentials, Bold, Italic, Font, Paragraph, Link],
+        toolbar: [],
+        link: {
+            // Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
+            addTargetToExternalLinks: true,
+
+            // Let the users control the "download" attribute of each link.
+            decorators: [
+                {
+                    mode: 'manual',
+                    label: 'Downloadable',
+                    attributes: {
+                        download: 'download'
+                    }
+                }
+            ]
+        }
+      })
+        .then(editor => { 
+        const toolbarElement = editor.ui.view.toolbar.element;
+        editor.enableReadOnlyMode( 'my-feature-id' );
+      })
+        .catch( error => {
+        console.log( error );
+      });
+    </script>
+    <script>
+        const menuO = document.querySelector("#menuO");
+        const menuC = document.querySelector("#menuC");
+        let menuChecked = false;
+
+        function cek(yesno) {
+        if (yesno == false) {
+            yesno = true;
+            menuO.classList.remove("hidden");
+            menuC.classList.add("hidden");
+            sidebar.style.left = "-500px";
+        } else {
+            yesno = false;
+            menuO.classList.add("hidden");
+            menuC.classList.remove("hidden");
+            sidebar.style.left = "0px";
+        }
+        }
+
+        const load_screen = document.querySelector("#loading-screen");
+        window.addEventListener('load', () => {
+            console.log("selesai di load");
+            load_screen.style.display = "none";
+        });
+    </script>
+        
+    <!-- Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // You can also pass an optional settings object
+      // below listed default settings
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+      });
+    </script>
+</body>
+
+</html>
+
