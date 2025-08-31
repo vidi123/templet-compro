@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT. Surya Sakthi Makmur | Galeri</title>
     <meta name="keywords" content="PT. Surya Sakthi Makmur, PT Surya Sakthi Makmur, pt surya sakthi makmur, Surya Sakthi Makmur, surya sakthi makmur, suryasakthimakmur, besi tua, kaleng, rongsok">
-    <!-- <meta name="author" content="smkstrampiljakarta.sch.id"> -->
+    <meta name="author" content="suryasakthigroup.com">
     <meta name="description" content="Menerima berbagai jenis besi, rongsok dan kaleng dari rumah, gedung, atau proyek dengan harga kompetitif dan layanan cepat.">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Galeri PT. Surya Sakthi Makmur" />
     <meta property="og:description" content="Sebagian Kecil Dokumentasi Pekerjaan Kami" />
-    <!-- <meta property="og:image" content="https://smkstrampiljakarta.sch.id/logo.jpeg" /> -->
-    <!-- <meta property="og:url" content="https://smkstrampiljakarta.sch.id/" /> -->
+    <meta property="og:image" content="https://suryasakthigroup.com/logo-SSM.webp" /> 
+    <meta property="og:url" content="https://suryasakthigroup.com/" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -24,6 +24,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <style>
+      *{
+        font-family: "Montserrat", Sans-serif;
+      }
       #business:hover{
         background: #000000ab;
         color: #fff;
@@ -66,9 +72,6 @@
 <body>
     <!-- Loading Screen -->
     <div class="w-full h-screen bg-[#034198] flex justify-center items-center fixed z-34" id="loading-screen">
-        <!-- <div class="w-[300px] h-[264px] overflow-hidden relative">
-            <img src="./picsvg_download (1).svg" alt="" class="absolute bg-white scale-x-114 scale-y-103" id="logo-loading">
-        </div> -->
         <img src="./logo-SSM.webp" alt="" class="w-[200px] h-[170px] bg-white" id="logo-loading">
     </div>
 
@@ -120,17 +123,8 @@ style="left: -500px; transition: 1s"
 <a href="tentang.html" class="">TENTANG KAMI</a>
 <a href="layanan.html" class="">LAYANAN KAMI</a>
 <a href="galeri.html" class="">GALERI</a>
-<!-- <details>
-  <summary class="list-none text-[#034198]">LAYANAN</summary>
-  <div class="mt-2 px-3 py-2 flex flex-col gap-1 bg-black/2 0 bg-opacity-15">
-    <a href="" class="text-[#034198]">SCRAP METAL CONSULTING</a>
-    <a href="" class="text-[#034198]">INDUSTRIAL DEMOLITION SERVICES</a>
-    <a href="" class="text-[#034198]">SHIP DEMOLITION SERVICES</a>
-    <a href="" class="text-[#034198]">UNDERWATER PIPELINE DECOMMISIONING</a>
-    <a href="" class="text-[#034198]">SCRAP METAL TRADING</a>
-  </div>
-</details> -->
-<a href="" class="">KONTAK KAMI</a>
+<a href="blog.html" class="">BLOG</a>
+<a href="https://wa.me/6281902032323?text=Halo PT. Surya Sakthi Makmur! Saya butuh bantuan terkait..." class="">KONTAK KAMI</a>
 </div>
 
 <!-- navbar desktop -->
@@ -141,7 +135,7 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
   <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
 </a>
 <div
-  class="w-11/12 lg:w-3/4 xl:w-1/2 flex justify-center items-center gap-10 text-xl font-semibold"
+  class="w-11/12 lg:w-3/4 xl:w-1/2 flex justify-center items-center gap-10 text-base font-semibold"
 >
   <a href="index.html" class="text-white">BERANDA</a>
   <a href="tentang.html" class="text-white"
@@ -149,12 +143,13 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
   >
   <a href="layanan.html" class="text-white">LAYANAN</a>
   <a href="galeri.html" class="text-white">GALERI</a>
+  <a href="blog.html" class="text-white">BLOG</a>
 </div>
 </nav>
 <main class="w-full flex flex-col">
       <!-- Galeri -->
-      <h2 class="w-full text-[#034198] text-2xl lg:text-4xl font-bold text-center pt-32">GALERI <span class="text-zinc-800">PEKERJAAN KAMI</span></h2>
-      <span class="w-[80%] text-zinc-800 text-lg lg:text-2xl font-bold text-center mx-auto pt-4 pb-20">Sebagian Kecil Dokumentasi Pekerjaan Kami</span>
+      <h2 class="w-full text-[#034198] text-lg lg:text-xl font-bold text-center pt-32">GALERI <span class="text-zinc-800">PEKERJAAN KAMI</span></h2>
+      <span class="w-[80%] text-zinc-800 text-base font-bold text-center mx-auto pt-4 pb-20">Sebagian Kecil Dokumentasi Pekerjaan Kami</span>
       <div class="w-[80%] lg:w-full flex justify-center flex-wrap gap-10 mx-auto pb-32" 
        data-aos="fade-up"
        data-aos-duration="1000"
@@ -169,21 +164,21 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
 
       <!-- Kontak -->
       <div class="w-[80%] bg-gradient-to-tr from-blue-500 to-blue-700 mx-auto rounded-xl flex flex-col items-center gap-4 text-center text-white font-bold px-9 py-8 mb-24">
-        <span class="text-2xl lg:text-5xl">Ingin Membongkar Bangunan atau Menjual Material Bekas?</span>
-        <span class="text-base lg:text-lg font-semibold">Kami Siap Membantu dengan Harga Terjangkau. Hubungi kami untuk informasi lebih lanjut dan estimasi biaya.</span>
-        <span class="text-xl">HUBUNGI KAMI SEKARANG</span>
+        <span class="text-xl">Ingin Membongkar Bangunan atau Menjual Material Bekas?</span>
+        <span class="text-base font-semibold">Kami Siap Membantu dengan Harga Terjangkau. Hubungi kami untuk informasi lebih lanjut dan estimasi biaya.</span>
+        <span class="text-base">HUBUNGI KAMI SEKARANG</span>
         <a
             href="https://wa.me/6281902032323?text=Halo PT. Surya Sakthi Makmur! Saya butuh bantuan terkait..."
-            class="w-[200px] h-[50px] bg-green-700 hover:bg-white border-2 border-transparent hover:border-blue-800 text-white hover:text-blue-800 text-base font-semibold rounded-full flex justify-center items-center mx-auto lg:mx-0 mt-2 transition"
+            class="w-[200px] h-[50px] bg-green-500 hover:bg-white border-2 border-transparent hover:border-blue-800 text-white hover:text-blue-800 text-base font-semibold rounded-full flex justify-center items-center mx-auto lg:mx-0 mt-2 transition"
         >
           <span class="fa fa-whatsapp w-10 h-10 justify-center items-center"></span>
-          <span>0819 0203 2323</span>  
+          <span>0819 0203 2323</span>   
         </a
           >
       </div>
     </main>
 
-  <footer class="bg-[#034198] text-white">
+  <footer class="bg-[#034198] text-white" id="footer">
     <div class="w-full flex flex-col lg:flex-row gap-10 px-6 py-10 lg:pl-28">
       <div class="lg:w-1/4 flex flex-col items-center gap-3 text-center">
         <div class="flex flex-col items-center">
@@ -202,7 +197,7 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
         </div>
       </div>
       <div
-        class="lg:w-2/4 lg:pr-20 flex flex-col items-center gap-3 lg:text-end text-start"
+        class="lg:w-3/4 lg:pr-20 flex flex-col items-center gap-3 lg:text-end text-start"
       >
         <p class="w-full">18 Office Park, Lantai 22, Suite (E, F & G), Jalan TB Simatupang, NO. 18. RT.02/RW.01, Kebagusan Kec Pasar Minggu, Kota Jakarta Selatan, Daerah Ibu Kota Jakarta - 12520</p>
         <div class="w-full flex flex-col">
@@ -291,5 +286,4 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
       });
     </script>
 </body>
-
 </html>
