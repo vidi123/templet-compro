@@ -75,9 +75,9 @@
 
     <!-- navbar mobile -->
 <nav
-    class="fixed md:hidden w-full flex justify-between px-3 py-2 bg-[#034198] border-b border-zinc-600 z-32">
+    class="fixed md:hidden w-full flex justify-between px-3 py-2 bg-white border-b border-zinc-600 z-32">
     <a href="/" class="w-[160px] h-[50px] flex">
-    <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
+    <img src="logo-gti.webp" alt="Logo" class="w-full h-full" />
     </a>
     <button id="menuO" class="w-[40px] h-[40px]" onclick="cek(true)">
     <svg
@@ -87,7 +87,7 @@
         width="31"
         height="31"
         viewBox="0 0 50 50"
-        fill="white"
+        fill="#0071c1"
     >
         <path
         d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
@@ -102,7 +102,7 @@
         width="31"
         height="31"
         viewBox="0 0 50 50"
-        fill="white"
+        fill="#0071c1"
     >
         <path
         d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
@@ -114,32 +114,58 @@
 <!-- sidebar -->
 <div
 id="sidebar"
-class="md:hidden fixed top-[60px] w-full h-screen flex flex-col gap-5 bg-[#dfdfdf] text-[#034198] text-sm font-semibold px-5 py-4 z-32"
+class="md:hidden fixed top-[64px] w-full h-screen flex flex-col gap-5 bg-[#0071c1]/95 text-white text-sm font-semibold px-5 py-4 z-32"
 style="left: -500px; transition: 1s"
 >
 <a href="index.html" class="">BERANDA</a>
 <a href="tentang.html" class="">TENTANG KAMI</a>
-<a href="layanan.html" class="">LAYANAN KAMI</a>
+<details>
+  <summary class="list-none text-white">LAYANAN</summary>
+  <div class="mt-2 px-3 py-2 flex flex-col gap-1 bg-black/30">
+    <a href="./" class="text-white">Fabrication</a>
+    <a href="./" class="text-white">Dust Collector</a>
+    <a href="./" class="text-white">Scrubber</a>
+    <a href="./" class="text-white">Fan Service</a>
+    <a href="./" class="text-white">Ducting</a>
+    <a href="./" class="text-white">Rekondisi Mesin</a>
+    <a href="./" class="text-white">Repair and Maintenance Factory Facility</a>
+  </div>
+</details>
 <a href="galeri.html" class="">GALERI</a>
-<a href="blog.html" class="">BLOG</a>
+<!-- <a href="blog.html" class="">BLOG</a> -->
 <a href="https://wa.me/6281902032323?text=Halo PT. Surya Sakthi Makmur! Saya butuh bantuan terkait..." class="">KONTAK KAMI</a>
 </div>
 
 <!-- navbar desktop -->
 <nav
-class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] border-b border-zinc-600 z-32"
+class="fixed hidden w-full md:flex justify-between px-10 bg-[#fff] shadow-lg z-32"
 >
-<a href="index.html" class="w-[160px] h-[50px] flex scale-150 ml-10">
-  <img src="logo1.jpeg" alt="Logo" class="w-full h-full" />
+<a href="index.html" class="w-[160px] h-[50px] flex ml-10 my-3">
+  <img src="logo-gti.webp" alt="Logo" class="w-full h-full" />
 </a>
 <div
-  class="w-11/12 lg:w-3/4 xl:w-1/2 flex justify-center items-center gap-10 text-base font-semibold"
+  class="w-11/12 lg:w-3/4 xl:w-1/2 flex justify-center items-center text-base font-semibold"
 >
-  <a href="index.html" class="text-white">BERANDA</a>
-  <a href="tentang.html" class="text-white">TENTANG KAMI</a>
-  <a href="layanan.html" class="text-white">LAYANAN</a>
-  <a href="galeri.html" class="text-white">GALERI</a>
-  <a href="blog.html" class="text-white">BLOG</a>
+  <a href="index.html" class="text-[#0071c1] hover:text-white hover:bg-[#0071c1] transition duration-300 h-full flex justify-center items-center px-4">BERANDA</a>
+  <a href="tentang.html" class="text-[#0071c1] hover:text-white hover:bg-[#0071c1] transition duration-300 h-full flex justify-center items-center px-4">TENTANG KAMI</a>
+  <details class="relative cursor-pointer h-full">
+    <summary class="text-[#0071c1] hover:text-white hover:bg-[#0071c1] transition duration-300 h-full flex justify-center items-center px-4">
+      LAYANAN
+    </summary>
+    <div
+      class="w-[300px] absolute px-3 py-2 rounded flex flex-col gap-1 bg-white text-black text-base border border-zinc-300"
+    >
+      <a href="/sewa/" class="text-[#0071c1] hover:text-yellow-600">Fabrication</a>
+      <a href="/sewa/" class="text-[#0071c1] hover:text-yellow-600">Dust Collector</a>
+      <a href="/sewa/" class="text-[#0071c1] hover:text-yellow-600">Scrubber</a>
+      <a href="/sewa/" class="text-[#0071c1] hover:text-yellow-600">Fan Service</a>
+      <a href="/sewa/" class="text-[#0071c1] hover:text-yellow-600">Ducting</a>
+      <a href="/sewa/" class="text-[#0071c1] hover:text-yellow-600">Rekondisi Mesin</a>
+      <a href="/sewa/" class="text-[#0071c1] hover:text-yellow-600">Repair and Maintenance Factory Facility</a>
+    </div>
+  </details>
+  <a href="galeri.html" class="text-[#0071c1] hover:text-white hover:bg-[#0071c1] transition duration-300 h-full flex justify-center items-center px-4">GALERI</a>
+  <!-- <a href="blog.html" class="text-[#0071c1] hover:text-white hover:bg-[#0071c1] transition duration-300 h-full flex justify-center items-center px-4">BLOG</a> -->
 </div>
 </nav>
 <main class="w-full flex flex-col">
@@ -147,15 +173,15 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
       <div class="">
         <div
           id="gambar1"
-          class="bg-[url('home2.jpeg')] bg-cover lg:bg-position-[center_top_-15rem] bg-x bg-no-repeat w-full h-screen lg:h-screen"
+          class="bg-[url('images/layanan2.jpeg')] bg-cover lg:bg-position-[center_top_-15rem] bg-x bg-no-repeat w-full h-screen lg:h-screen"
         >
           <div
-            class="w-full h-full bg-black/70 flex flex-col gap-5 justify-center items-center"
+            class="w-full h-full bg-black/80 flex flex-col gap-5 justify-center items-center"
           >
             <span class="w-[90%] text-white text-2xl font-semibold text-center" data-aos="zoom-in" data-aos-duration="1000"
-              >PT. Surya Sakthi Makmur  Melayani wilayah Makasar dan Sekitarnya.</span>
+              >PT. GITINDO TEKNIK INDUSTRI</span>
             <span class="w-[90%] text-white text-lg lg:text-xl font-semibold text-center" data-aos="fade-up" data-aos-duration="1000">
-              Menerima berbagai jenis besi dan bekas campur,rongsok dan kaleng dari rumah, gedung, atau proyek dengan harga kompetitif dan layanan cepat.</span
+              General Contractor, Air Pollution Control, Maintenance.</span
             >
           </div>
         </div>
@@ -174,10 +200,11 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
             TENTANG <span class="text-[#034198]">KAMI</span>
           </h2>
           <p>
-            PT. SURYA SAKTHI MAKMUR adalah perusahaan Indonesia yang didirikan oleh seorang teknokrat India dan Malaysia. Kami telah berkecimpung di industri skrap logam selama 28 tahun terakhir di Malaysia dan India, dan memasuki pasar skrap logam Indonesia pada tahun 2020.
+            PT. Gitindo Teknik Industri Sebuah perusahaan yang bergerak di bidang Engineering dan Pabrikasi di Bekasi, Jawa Barat,Indonesia.
           </p>
           <p>
-            Sebagai penyedia skrap logam FERROUS & NON-FERROUS berlisensi untuk industri daur ulang logam global, kami berkontribusi dalam menciptakan masyarakat yang berorientasi pada daur ulang dan daur ulang sumber daya. Spesialisasi dalam perdagangan domestik logam ferro seperti HMS, P&S, Skrap Premium, dan LMS, kami juga mengekspor semua jenis logam non-ferro seperti Tembaga, Aluminium, Kuningan, Baja Tahan Karat, dan lainnya.
+            Kami memiliki workshop dengan
+            peralatan mesin berkualitas tinggi serta didukung oleh tenaga ahli yang berpengalaman di bidangnya masing-masing.
           </p>
           <a
             href="tentang.html"
@@ -187,7 +214,7 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
         </div>
         <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <img
-            src="./SSM_About.png"
+            src="./images/about.png"
             alt="SSM Picture"
             class="w-full lg:w-3/4 rounded"
             data-aos="fade-down"
@@ -199,7 +226,7 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
       </div>
 
       <!-- MESIN -->
-      <h2 class="w-full bg-white lg:bg-[#dbdbdb] text-zinc-800 text-xl font-bold text-center mx-auto pt-12">MESIN <span class="text-[#034198]">SURYA SAKTHI MAKMUR</span></h2>
+      <!-- <h2 class="w-full bg-white lg:bg-[#dbdbdb] text-zinc-800 text-xl font-bold text-center mx-auto pt-12">MESIN <span class="text-[#034198]">SURYA SAKTHI MAKMUR</span></h2>
       <div class="w-[80%] lg:w-full bg-white lg:bg-[#dbdbdb] mx-auto flex flex-col lg:flex-row justify-evenly gap-10 py-18 pb-32 text-2xl lg:text-xl text-[#034198] font-bold overflow-hidden">
         <div class="w-full lg:w-2/5 bg-[#034198] flex flex-col text-center rounded rounded-xl overflow-hidden text-white shadow-[0px_2px_7px_1px_#7aadfa]"
           data-aos="fade-right"
@@ -215,11 +242,11 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
           <img src="./Mesin-Hammer-Mil-Crusher.jpeg" alt="" class="w-full h-[350px] border-b-5 border-white">
           <span class="w-full lg:w-[250px] h-[45px] bg-[#034198] lg:border-4 border-white text-base flex justify-center items-center lg:rounded-full mx-auto -mt-6 mb-10 pt-2 lg:pt-0">Hammer Mill Crusher</span>
         </div>
-      </div>
+      </div> -->
 
       <h2 class="w-full text-zinc-800 text-xl font-bold text-center pt-12">LAYANAN <span class="text-[#034198]">KAMI</span></h2>
-      <span class="w-[80%] text-zinc-800 text-base font-bold text-center mx-auto pt-4">Kami membeli besi tua dari hasil bongkaran, kaleng dan rongsok dengan harga yang sesuai nilai pasar.</span>
-      <div class="w-[80%] lg:w-[90%] mx-auto flex flex-col lg:flex-row justify-center gap-4 pt-14 pb-24 text-2xl lg:text-xl text-[#034198] font-bold">
+      <span class="w-[80%] text-zinc-800 text-base font-bold text-center mx-auto pt-4">Kami melayani pembuatan dan instalasi berbagai fasilitas pendukung pabrik.</span>
+      <div class="w-[80%] lg:w-[50%] mx-auto flex flex-col lg:flex-row justify-center gap-4 pt-14 pb-24 text-2xl lg:text-xl text-[#034198] font-bold">
         <!-- Slider -->
         <div id="controls-carousel" class="relative w-full" data-carousel="static"
          data-aos="flip-right"
@@ -229,89 +256,19 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Besi-Tua2.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <img src="./images/layanan1.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="./Besi-Tua1.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <img src="./images/layanan2.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Besi-Tua3.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <img src="./images/layanan3.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Besi-Tua4.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Besi-Tua5.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 6 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Besi-Tua6.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 7 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Besi-Tua7.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 8 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Besi-Tua8.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-            </div>
-            <!-- Slider controls -->
-            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30  group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                    </svg>
-                    <span class="sr-only">Previous</span>
-                </span>
-            </button>
-            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30  group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                    </svg>
-                    <span class="sr-only">Next</span>
-                </span>
-            </button>
-        </div>
-        <div id="controls-carousel" class="relative w-full" data-carousel="static"
-         data-aos="flip-up"
-         data-aos-duration="1000"
-         data-aos-offset="100"
-         data-aos-delay="600">
-            <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Kaleng-Dan-Rongsok1.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="./Kaleng-Dan-Rongsok2.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Kaleng-Dan-Rongsok3.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Kaleng-Dan-Rongsok4.jpeg" class="absolute block w-full h-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Kaleng-Dan-Rongsok5.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 6 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Kaleng-Dan-Rongsok6.jpeg" class="absolute block w-full h-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 7 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./Kaleng-Dan-Rongsok7.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <img src="./images/layanan4.jpeg" class="absolute block w-full brightness-75 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
             </div>
             <!-- Slider controls -->
@@ -334,34 +291,6 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
         </div>
       </div>
 
-      <!-- Metal Production -->
-      <h2 class="w-[80%] lg:w-full text-blue-900 text-xl font-bold text-center mx-auto pt-10">STEEL PRODUCTION <span class="text-zinc-800">AND</span> SCRAP CONSUMPTION</h2>
-      <div
-        class="w-full bg-white flex flex-col lg:flex-row justify-between gap-10 px-8 lg:px-16 py-14 pb-32 overflow-hidden">
-        <div class="w-full lg:w-1/2 flex justify-center lg:justify-start" data-aos="fade-left"
-         data-aos-duration="1000"
-         data-aos-offset="100"
-         data-aos-delay="500">
-          <img
-            src="./scrap consumting.jpeg"
-            alt="SSM Picture"
-            class="w-full lg:h-[400px]"
-          />
-        </div>
-        <div class="w-full lg:w-1/2 flex flex-col gap-4 text-zinc-800 text-justify text-base font-semibold" data-aos="zoom-in"
-        data-aos-duration="1000"
-        data-aos-offset="100">
-          <p>
-            Pada tahun 2019, sekitar 1,5 miliar metrik ton baja diproduksi hanya di tujuh wilayah, dengan Tiongkok sebagai produsen terbesar dengan 996 juta ton baja. Secara global, konsumsi skrap baja meningkat sebesar 3,4 persen antara tahun 2018 dan 2019.
-          </p>
-          <p>
-            Sejak revolusi industri pertama, baja telah menjadi salah satu material utama yang digunakan dalam produksi industri. Dengan meningkatnya kesadaran lingkungan, perusahaan kini memprioritaskan penggunaan logam daur ulang dalam proses produksi.
-          </p>
-          <p>
-            Logam bekas dihancurkan dan dicacah menjadi skrap yang dapat diangkut dengan mudah dan digunakan dalam siklus produksi. Tiongkok adalah pengguna skrap baja terbesar di dunia. Di antara eksportir skrap baja terkemuka, AS mengekspor lebih dari 24 juta metrik ton pada tahun 2011, yang menurun menjadi 18 juta metrik ton pada tahun 2019.
-          </p>
-        </div>
-      </div>
 
       <!-- Mengapa Memilih Kami -->
       <div class="w-full flex flex-col pb-20">
@@ -423,18 +352,31 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
        data-aos="fade-up"
        data-aos-duration="1000"
        data-aos-delay="200">
-        <img src="./SSM_Pic1.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
-        <img src="./SSM_Pic2.png" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
-        <img src="./Mesin-Hammer-Mil-Crusher.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
-        <img src="./home2.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
-        <img src="./Kaleng-Dan-Rongsok4.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
-        <img src="./Mesin-Shredding.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./images/layanan1.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./images/layanan2.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./images/layanan3.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+        <img src="./images/layanan4.jpeg" alt="" class="w-full lg:w-[40%] h-[350px] rounded-xl shadow-[0px_2px_7px_1px_#7aadfa]">
+      </div>
+
+      <!-- Client -->
+      <div class="w-full flex flex-col pb-20">
+        <h2 class="w-full text-zinc-800 text-xl font-bold text-center">Customer <span class="text-[#034198]">KAMI</span></h2>
+        <ul class="w-fit mx-auto text-[#0071c1] pt-14 text-lg font-semibold">
+          <li>PT Century Batteries Indonesi</li>
+          <li>PT. Yamaha Music Manufacturing Indonesi</li>
+          <li>PT. DIC GRAPHICS</li>
+          <li>Project HYUNDAI</li>
+          <li>Project KAPAL API</li>
+          <li>Project KANSAI PAINT</li>
+          <li>Project TPR</li>
+          <li>Project Elang Perdana</li>
+        </ul>
       </div>
 
       <!-- Kontak -->
       <div class="w-[80%] bg-gradient-to-tr from-blue-500 to-blue-700 mx-auto rounded-xl flex flex-col items-center gap-4 text-center text-white font-bold px-9 py-8 mb-24">
-        <span class="text-xl">Ingin Membongkar Bangunan atau Menjual Material Bekas?</span>
-        <span class="text-base font-semibold">Kami Siap Membantu dengan Harga Terjangkau. Hubungi kami untuk informasi lebih lanjut dan estimasi biaya.</span>
+        <span class="text-xl">Ingin Membuat Dust Collector atau fasilitas pabrik lainnya?</span>
+        <span class="text-base font-semibold">Kami Siap Membantu dengan sepenuh hati. Hubungi kami untuk informasi lebih lanjut dan pemesanan.</span>
         <span class="text-base">HUBUNGI KAMI SEKARANG</span>
         <a
             href="https://wa.me/6281902032323?text=Halo PT. Surya Sakthi Makmur! Saya butuh bantuan terkait..."
@@ -447,42 +389,43 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
       </div>
     </main>
 
-  <footer class="bg-[#034198] text-white">
+  <footer class="bg-white text-[#0071c1] border-t border-[#0071c1]/50">
     <div class="w-full flex flex-col lg:flex-row gap-10 px-6 py-10 lg:pl-28">
       <div class="lg:w-1/4 flex flex-col items-center gap-3 text-center">
         <div class="flex flex-col items-center">
-          <img src="logo1.jpeg" alt="Logo" class="w-full" />
+          <img src="./logo-gti.webp" alt="Logo" class="w-full" />
         </div>
       </div>
       <div class="lg:w-3/4 flex flex-col gap-4">
-        <span class="font-semibold text-xl text-WHITE"
-          >SURYA SAKTHI MAKMUR</span
+        <span class="font-semibold text-xl"
+          >GITINDO TEKNIK INDUSTRI</span
         >
         <div class="flex flex-col gap-3">
-          <a href="index.html" class="w-fit hover:text-yellow-400">BERANDA</a>
-          <a href="tentang.html" class="w-fit hover:text-yellow-400">TENTANG KAMI</a>
-          <a href="layanan.html" class="w-fit hover:text-yellow-400">LAYANAN</a>
-          <a href="galeri.html" class="w-fit hover:text-yellow-400">GALERI</a>
+          <a href="index.html" class="w-fit hover:text-yellow-600">BERANDA</a>
+          <a href="tentang.html" class="w-fit hover:text-yellow-600">TENTANG KAMI</a>
+          <a href="layanan.html" class="w-fit hover:text-yellow-600">LAYANAN</a>
+          <a href="galeri.html" class="w-fit hover:text-yellow-600">GALERI</a>
         </div>
       </div>
       <div
         class="lg:w-3/4 lg:pr-20 flex flex-col items-center gap-3 lg:text-end text-start"
       >
-        <p class="w-full">Dusun Campagaya, Kab. Takalar, Provinsi Sulawesi Selatan - 92255</p>
+        <p class="w-full">Jl. Baru Cipendawa, Jatiasih RT. 03/RW 02
+			     Kelurahan Bojong Menteng, Rawa Lumbu Bekasi, Jawa Barat</p>
         <div class="w-full flex flex-col">
-          <span>Website: www.suryasakthimakmurgroup.com</span>
-          <span>Email: inf0@suryasakthigroup.com</span>
+          <span>No. Telp : 021-29487692, Fax : 021-29487693</span>
+          <span>Email: gitindoteknikindustri@gmail.com</span>
         </div>
         <div class="w-full flex lg:justify-end justify-start gap-3">
           <a
             href="https://www.instagram.com/surya_sakthimakmur/"
-            class="fa fa-instagram w-10 h-10 rounded-full bg-[#034198] text-xl text-white flex justify-center items-center hover:bg-white hover:text-[#034198] border border-white"
+            class="fa fa-instagram w-10 h-10 rounded-full bg-[#0071c1] text-xl text-white flex justify-center items-center hover:bg-white hover:text-[#0071c1] border border-white"
             target="_blank"
             id="sosmed-ico"
           ></a>
           <a
             href=""
-            class="fa fa-whatsapp w-10 h-10 rounded-full bg-[#034198] text-xl text-white flex justify-center items-center hover:bg-white hover:text-[#034198] border border-white"
+            class="fa fa-whatsapp w-10 h-10 rounded-full bg-[#0071c1] text-xl text-white flex justify-center items-center hover:bg-white hover:text-[#0071c1] border border-white"
             target="_blank"
             id="sosmed-ico"
           ></a>
@@ -490,10 +433,10 @@ class="fixed hidden w-full md:flex justify-between px-10 py-3 bg-[#034198] borde
       </div>
     </div>
     <div
-      class="w-full h-14 bg-blue-700 text-white text-center font-medium flex justify-center items-center border-t border-zinc-600"
+      class="w-full h-14 bg-[#0071c1] text-white text-center font-medium flex justify-center items-center"
     >
       <span class="text-sm"
-        >© Copyright PT. Surya Sakthi Makmur. All Rights Reserved</span
+        >© Copyright PT. GITINDO TEKNIK INDUSTRI. All Rights Reserved</span
       >
     </div>
   </footer>
